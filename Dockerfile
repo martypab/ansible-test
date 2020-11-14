@@ -1,6 +1,6 @@
-FROM registry.access.redhat.com/ubi8/ubi
+FROM registry.access.redhat.com/ubi8/python-36
 USER root
-RUN pip3 install ansible
+RUN pip install ansible
 COPY ./app/demo.py /app/demo.py
 CMD [ "python", "/app/server.py" ] 
 
